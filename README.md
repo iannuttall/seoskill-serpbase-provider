@@ -18,16 +18,16 @@ npm install --global seo
 
 ## Install the provider
 
-Install this package through the reviewed provider list. The command shows the package, publisher, repository, and local permission warning before it installs code.
+Install this package by npm name. The command shows the exact version, publisher, repository, integrity, and local permission warning before it installs code.
 
 ```sh
-seo providers install serpbase
+seo providers install @seoskill/serpbase-provider
 ```
 
 For JSON or CI use, approve the exact package without a prompt:
 
 ```sh
-seo providers install serpbase --yes --json
+seo providers install @seoskill/serpbase-provider --yes --json
 ```
 
 The provider loader only runs packages recorded in the local provider registry. It does not scan project or global `node_modules` directories.
