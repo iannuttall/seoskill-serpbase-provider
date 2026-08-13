@@ -1,8 +1,49 @@
-# SerpBase provider for `seo`
+<h1 align="center">SerpBase provider for SEO Skill</h1>
 
-Add live Google result snapshots from SerpBase to the reports and rank tracking tools in the `seo` command.
+<p align="center">
+  Add live Google result snapshots from SerpBase to reports and rank tracking in the <code>seo</code> command.
+</p>
+
+<p align="center">
+  <a href="#install-the-provider">Install</a>
+  ·
+  <a href="https://seoskill.dev/docs/serpbase">Documentation</a>
+  ·
+  <a href="https://www.npmjs.com/package/@seoskill/serpbase-provider">npm</a>
+  ·
+  <a href="https://github.com/iannuttall/seo">Main project</a>
+  ·
+  <a href="https://serpbase.dev/docs">SerpBase API</a>
+  ·
+  <a href="https://github.com/iannuttall/seoskill-serpbase-provider/issues">Questions</a>
+  ·
+  <a href="SECURITY.md">Security</a>
+  ·
+  <a href="LICENSE">License</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/iannuttall/seoskill-serpbase-provider/actions/workflows/ci.yml"><img alt="Checks" src="https://img.shields.io/github/actions/workflow/status/iannuttall/seoskill-serpbase-provider/ci.yml?branch=main&label=checks&style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/@seoskill/serpbase-provider"><img alt="npm version" src="https://img.shields.io/npm/v/@seoskill/serpbase-provider?style=flat-square"></a>
+  <img alt="Node 22 or newer" src="https://img.shields.io/badge/Node-22%2B-339933?style=flat-square">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-ready-3178c6?style=flat-square">
+  <a href="LICENSE"><img alt="Apache 2.0 license" src="https://img.shields.io/badge/license-Apache--2.0-lightgrey?style=flat-square"></a>
+</p>
 
 The package keeps the SerpBase adapter outside the main `seo` package. The main package still owns installation, credentials, request and spend limits, caching, report logic, and evidence labels.
+
+## What this package adds
+
+| Part | What it does |
+| --- | --- |
+| Live result snapshots | Maps SerpBase organic rows to the shared `serp-snapshot` evidence used by compatible reports. |
+| Rank collection | Supplies the live result part of existing rank-tracking runs. |
+| Credit evidence | Keeps charged credits, request IDs, page coverage, and the local cost estimate separate. |
+| Local connection | Keeps the API key in the managed secret store or reads it from the process environment. |
+
+This is a first-party provider package maintained by the same team as
+[`seo`](https://github.com/iannuttall/seo). It uses the public provider SDK, so
+its adapter, tests, and releases stay separate from the main package.
 
 ## Requirements
 
